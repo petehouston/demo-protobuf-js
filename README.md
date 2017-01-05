@@ -49,13 +49,13 @@ user.setRole(Demo.Role.ADMIN);
 
 Make binary, which eventually generate output in `Uint8Array` format.
 
-```
+```js
 var buffer = user.serializeBinary();
 ```
 
 To transform binary into original proto object, use the static method `deserializeBinary` from the appropriate class. Make sure the input parameter is in `Uint8Array` type.
 
-```
+```js
 var convertedUser = Demo.UserInfo.deserializeBinary(bufUser);
 ```
 
@@ -72,10 +72,13 @@ For example:
 ```
 message ChatRoom {
     repeated UserInfo users = 1; // list all users in a chat room
-}0
+}
+
+```
 
 equivalent to following JS object
 
+```js
 chatRoom = {
     usersList: [ ... ]
 }
