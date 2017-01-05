@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package Demo;
+
+enum Role {
+    ADMIN  = 0;
+    EDITOR = 1;
+    USER   = 2;
+}
+
+message UserInfo {
+    int32  user_id = 1;
+    string name    = 2;
+    Role   role    = 3;
+}

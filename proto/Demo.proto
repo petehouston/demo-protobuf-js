@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package Demo;
+
+import "Common.proto";
+
+message ChatPacket {
+    int32    user_id   = 1;
+    string   content   = 2;
+    UserInfo user_info = 3;
+}
